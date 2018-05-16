@@ -1,0 +1,88 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package essentials;
+import java.util.Random; 
+import java.util.Scanner; 
+
+
+/**
+ *
+ * @author shelby.monper
+ */
+public class SoftballGame {
+    static int hits = 0;
+    static int score = 0;
+    static int outs = 0; 
+    public static void main(String[] Args, int hitter)
+    {
+        
+       
+        final int UPPER_END_OF_RANGE = 100;
+        Random randGenerator = new Random(); 
+       
+        Scanner scan = new Scanner(System.in);
+        int Outs = 0;
+       
+       
+        while(Outs<3)
+        {
+        int hit = randGenerator.nextInt(UPPER_END_OF_RANGE); 
+        System.out.println("Type 1 for your at bat then click enter");
+        String test = scan.next(); 
+            int hit = 0;
+        
+       
+            if(hit>1)
+            {
+                System.out.println("you hit a single");
+            int baserunner; 
+            baserunner = hitter + 1;
+               
+            }
+
+            if(hit<0)
+            {
+            boolean you = false;
+                System.out.println(you got out);
+          
+                int baserunner = hitter - 1; 
+            }
+
+            if(hit>2)
+            {
+                System.out.println("you hit a double"); 
+            int baserunner; 
+            baserunner = hitter + 2;
+            }
+
+            if(hit>3)
+            {
+                System.out.println("you got a triple"); 
+            int baserunner = hitter + 3; 
+            }
+
+            if(hit>4)
+            {
+                System.out.println("You hit a homerun");
+                score = hitter + 1; 
+            }
+
+            if(hit<1)
+            {
+                System.out.println("you strikeout");
+                outs = hitter - 1; 
+            }
+
+            if(hit>5)
+            {
+                System.out.println("You got a grandslam");
+            int baserunners = 0;
+                score = baserunners +4; 
+            }// End class
+         
+         
+       
+       
